@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "icon": {
+      "type": "lucide",
+      "name": "github"
+    },
+    "text": "GitHub",
+    "link": "https://github.com/nglammm"
+  },
+  {
+    "id": 2,
+    "icon": {
+      "type": "lucide",
+      "name": "facebook"
+    },
+    "text": "Facebook",
+    "link": "https://www.facebook.com/nglam.17092010/"
+  },
+  {
+    "id": 2,
+    "icon": {
+      "type": "lucide",
+      "name": "youtube"
+    },
+    "text": "Youtube",
+    "link": "https://www.youtube.com/@DontGetTheL"
+  },
+  {
+    "id": 3,
+    "icon": {
+      "type": "lucide",
+      "name": "link"
+    },
+    "text": "Leetcode",
+    "link": "https://leetcode.com/doggz"
+  }
+]

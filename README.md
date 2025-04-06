@@ -1,69 +1,42 @@
-# Using Netlify Edge Functions with Astro
+![Spectre, a terminal-inspired theme for Astro.](./images/README.png)
 
-A starter template for building a Server-Side Rendered (SSR) [Astro](https://astro.build/) app with [Netlify Edge Functions](https://docs.netlify.com/netlify-labs/experimental-features/edge-functions/).
+Spectre is a terminal-inspired theme for Astro, built using TypeScript and Astro.
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/sarahetter/astro-netlify-edge-starter)
+## Getting Started
 
-This demo uses Astro's [`@astrojs/netlify`](https://github.com/withastro/astro/tree/main/packages/integrations/netlify) package to deploy your site with SSR enabled. The application will detect the location of the user requesting the page and will render it in the browser.
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/louisescher/spectre/tree/main)
+[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/louisescher/spectre/tree/main)
 
-## Demo site
-
-Visit https://astro-edge-functions-demo.netlify.app/ to see the code in this repository in action.
-
-![Example of the sample application detectiong the location and showing an in-browser alert](media/ssr_hydration.gif)
-
-## Local development
-
-To get started with local development, follow the instructions below in your terminal application.
-
-1. Clone this repository locally:
-
-    ```bash
-    git clone https://github.com/sarahetter/astro-netlify-edge-starter
-    ```
-2. Navigate to the repository folder:
-
-    ```bash
-    cd astro-netlify-edge-starter
-    ```
-3. Install the package dependencies:
-
-    ```bash
-    npm install
-    ```
-
-4. Start the application:
-
-    ```bash
-    npm run dev
-    ```
-
-If the command was successful, you should be able to get a local URL that you can open in your browser.
-
-![Example of Astro SSR application running locally](media/npm_run_dev.gif)
-
-Keep in mind that because you are running the application locally, the geolocation component will not work. Once you deploy the application to Netlify, the location should be correctly identified.
-
-## Deploying the project to Netlify
-
-To deploy the project to Netlify, make sure that you have the [Netlify CLI](https://docs.netlify.com/cli/get-started/) installed. You can install the Netlify CLI globally by running this command in the terminal:
+Alternatively, you can create a new Astro project with Spectre like this:
 
 ```bash
-npm install netlify-cli -g
+# npm
+npm create astro@latest -- --template louisescher/spectre
+
+# pnpm
+pnpm create astro@latest --template louisescher/spectre
+
+# yarn
+yarn create astro --template louisescher/spectre
 ```
 
-Once the CLI is installed, run the [deployment command](https://cli.netlify.com/commands/deploy) in the terminal:
+## Features
 
-```bash
-netlify deploy --build
-```
+- 100 / 100 Lighthouse performance
+- Responsive for all screen sizes
+- Fully accessible
+- Type-Safe
+- Auto-generated sitemap
+- Markdown / MDX Support
+- Builds on content collections
+- Search powered by [pagefind](https://pagefind.app)
+- Comments powered by [giscus](https://giscus.app) (can be turned off)
+- More!
 
-Once the command is executed, you'll be prompted for information about the site where the code needs to be deployed.
+## Curious?
 
-![Example of deployment to a new Netlify site](media/new_netlify_site.gif)
+Head over to [the preview page](https://spectre.louisescher.dev) to find out more!
 
-If the command is successful, you should see a URL to your site in the terminal.
+### Spectre Integration
 
-## Questions and troubleshooting
-
-If you found an issue with the code in this repository, feel free to [open an issue](https://github.com/sarahetter/astro-netlify-edge-starter/issues) or let us know in the [Netlify Forums](https://answers.netlify.com/).
+If you want to know more about how the custom integration that is used in the `astro.config.ts` file works, head over to the [integration's own README](https://github.com/louisescher/spectre/tree/master/package)!

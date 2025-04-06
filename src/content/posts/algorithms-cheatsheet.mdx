@@ -1,0 +1,151 @@
+---
+title: "Algorithms Cheatsheet"
+description: "Popular algorithms with their code templates."
+image: "../assets/algo_banner.png"
+createdAt: 5-6-2025
+draft: false
+tags:
+  - algorithms
+  - cheatsheets
+  - code templates
+---
+
+When tackling coding problems, especially in competitive programming or technical interviews, recognizing **common patterns** is a game-changer. These patterns — known as **algorithm templates** — provide reusable code structures that simplify solving a wide range of problems.
+
+Let's break down the most powerful ones:
+
+---
+
+## Binary Search
+
+### When to Use
+- The input is **sorted**
+- You're looking for a **target value**, or need to find **boundaries** (first/last occurrence)
+- Problems with **monotonic conditions** — as values increase/decrease, something predictable happens
+
+### How It Works
+Binary search cuts the search space in half each time, reducing time complexity from `O(n)` to `O(log n)`.
+
+### Code
+
+```python title="bs.py"
+def binary_search(arr, target):
+    left, right = 0, len(arr) - 1
+    while left <= right:
+        mid = (left + right) // 2
+        if arr[mid] == target:
+            return mid  # or customize for boundary
+        elif arr[mid] < target:
+            left = mid + 1
+        else:
+            right = mid - 1
+    return -1
+```
+
+---
+
+## Two Pointers
+
+### When to Use
+- Working with **sorted arrays or linked lists**
+- Looking for **pairs or triplets** with a certain condition (e.g., sum)
+- Problems involving **converging or diverging** pointers
+
+### How It Works
+Two pointers move inward/outward to scan from both ends, reducing time from `O(n²)` to `O(n)`.
+
+### Code
+
+```python title="tp.py"
+def two_pointer(nums, target):
+    nums.sort()
+    left, right = 0, len(nums) - 1
+    while left < right:
+        curr_sum = nums[left] + nums[right]
+        if curr_sum == target:
+            return [nums[left], nums[right]]
+        elif curr_sum < target:
+            left += 1
+        else:
+            right -= 1
+```
+
+---
+
+## Sliding Window
+
+### When to Use
+- Substrings or subarrays problems (e.g., longest/shortest, maximum/minimum)
+- Contiguous sequences
+- Performance optimization for **repeated work**
+
+### How It Works
+The window slides over the input, maintaining a subset of the data while updating the result.
+
+### Code
+
+```python title="sw.py"
+def max_subarray_sum(nums, k):
+    window_sum = sum(nums[:k])
+    max_sum = window_sum
+    for i in range(k, len(nums)):
+        window_sum += nums[i] - nums[i - k]
+        max_sum = max(max_sum, window_sum)
+    return max_sum
+```
+
+---
+
+## Hash Table
+
+### When to Use
+- Frequency counting
+- Lookup problems: duplicates, anagrams, sums
+- Associative mapping of keys to values
+
+### How It Works
+Hash tables allow `O(1)` average-time insertion, deletion, and lookup.
+
+### Code
+
+```python title="ht.py"
+def has_duplicate(nums):
+    seen = set()
+    for num in nums:
+        if num in seen:
+            return True
+        seen.add(num)
+    return False
+```
+
+---
+
+## Prefix Sum
+
+### When to Use
+- Range queries like sum between `i` and `j`
+- Reducing nested loops in subarray calculations
+- Immutable data where multiple queries are made
+
+### How It Works
+Pre-compute cumulative sums so queries can be answered in `O(1)` time.
+
+### Code
+
+```python title="pf.py"
+def prefix_sum(nums):
+    prefix = [0]
+    for num in nums:
+        prefix.append(prefix[-1] + num)
+    return prefix
+
+# Usage: sum from index i to j is prefix[j+1] - prefix[i]
+```
+
+---
+
+## Final Thoughts
+
+These templates are not just snippets — they represent **powerful mental models**. By internalizing them, you'll reduce boilerplate, spot patterns faster, and elevate your problem-solving game.
+
+Practice using each one in real problems. Soon, they'll become second nature.

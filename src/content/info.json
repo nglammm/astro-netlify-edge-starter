@@ -1,0 +1,35 @@
+[
+  {
+    "id": 3,
+    "icon": {
+      "type": "lucide",
+      "name": "cake"
+    },
+    "type": "lucide",
+    "text": "17/9/2010"
+  },
+  {
+    "id": 2,
+    "icon": {
+      "type": "lucide",
+      "name": "mars"
+    },
+    "text": "Male"
+  },
+  {
+    "id": 1,
+    "icon": {
+      "type": "lucide",
+      "name": "graduation-cap"
+    },
+    "text": "Newton 5"
+  },
+  {
+    "id": 4,
+    "icon": {
+      "type": "lucide",
+      "name": "laptop"
+    },
+    "text": "A Python programmer"
+  }
+]
